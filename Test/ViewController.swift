@@ -10,14 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var myImageView: UIImageView!
-
-    @IBOutlet weak var thumb1View: UIImageView!
     
     
-    @IBOutlet weak var thumb2View: UIImageView!
+    @IBAction func onTabButton1(_ sender: Any) {
+        myImageView.image = UIImage(named:"image1")
+    }
     
+    @IBAction func onTabButton2(_ sender: Any) {
+        myImageView.image = UIImage(named:"image2")
+    }
     
-    @IBOutlet weak var thumb3View: UIImageView!
+    @IBAction func onTapButton3(_ sender: Any) {
+        myImageView.image = UIImage(named:"image3")
+    }
     
     
     override func viewDidLoad() {
@@ -25,11 +30,6 @@ class ViewController: UIViewController {
         
 
         myImageView.image = UIImage(named:"myImageFile")
-        
-        
-        thumb1View.image = UIImage(named:"image1")
-        thumb2View.image = UIImage(named:"image2")
-        thumb3View.image = UIImage(named:"image3")
 
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -39,7 +39,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
