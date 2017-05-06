@@ -1,14 +1,14 @@
 //
-//  demo3UITests.swift
-//  demo3UITests
+//  demo4UITests.swift
+//  demo4UITests
 //
-//  Created by 鹿野壮 on 2017/05/05.
+//  Created by 鹿野壮 on 2017/05/06.
 //  Copyright © 2017年 鹿野壮. All rights reserved.
 //
 
 import XCTest
 
-class demo3UITests: XCTestCase {
+class demo4UITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

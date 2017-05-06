@@ -1,15 +1,15 @@
 //
-//  demo3Tests.swift
-//  demo3Tests
+//  demo4Tests.swift
+//  demo4Tests
 //
-//  Created by 鹿野壮 on 2017/05/05.
+//  Created by 鹿野壮 on 2017/05/06.
 //  Copyright © 2017年 鹿野壮. All rights reserved.
 //
 
 import XCTest
-@testable import demo3
+@testable import demo4
 
-class demo3Tests: XCTestCase {
+class demo4Tests: XCTestCase {
     
     override func setUp() {
         super.setUp()
