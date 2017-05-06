@@ -9,11 +9,21 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
+    @IBOutlet weak var secondImageView: UIImageView!
+    
+    var imageName:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        guard let myImageName = imageName else
+        {
+            return
+        }
+        
+        
+        secondImageView.image = UIImage(named: myImageName)
     }
 
     override func didReceiveMemoryWarning() {

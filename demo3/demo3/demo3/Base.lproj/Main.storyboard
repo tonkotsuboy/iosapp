@@ -24,22 +24,33 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n0I-rj-eZt">
                                 <rect key="frame" x="0.0" y="269" width="320" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tih-Ms-sRK">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tih-Ms-sRK">
                                         <rect key="frame" x="0.0" y="0.0" width="106.5" height="30"/>
                                         <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="🐿"/>
+                                        <connections>
+                                            <segue destination="3fo-FL-7Z7" kind="presentation" id="puA-JP-zd1"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7O-ks-D28">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7O-ks-D28">
                                         <rect key="frame" x="106.5" y="0.0" width="107" height="30"/>
                                         <color key="backgroundColor" red="0.81183209199999995" green="0.81183209199999995" blue="0.81183209199999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="🐘"/>
+                                        <connections>
+                                            <segue destination="3fo-FL-7Z7" kind="popoverPresentation" popoverAnchorView="q7O-ks-D28" id="upq-la-tTN">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55n-w2-LBP">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55n-w2-LBP">
                                         <rect key="frame" x="213.5" y="0.0" width="106.5" height="30"/>
                                         <color key="backgroundColor" white="0.43429129459999999" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title=" 🐈">
                                             <color key="titleShadowColor" red="1" green="0.46506173639999998" blue="0.47011312309999997" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="3fo-FL-7Z7" kind="presentation" id="tSo-L4-lP5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -67,29 +78,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2番めの画面です" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYa-ry-BvG">
-                                <rect key="frame" x="94" y="243" width="132" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pql-Qh-mTt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAS-RN-TjD">
-                                <rect key="frame" x="40" y="48" width="31" height="30"/>
+                                <rect key="frame" x="16" y="28" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="8sw-bQ-Zua" kind="unwind" unwindAction="returnTopWithSegue:" id="y42-ks-wha"/>
+                                    <segue destination="8sw-bQ-Zua" kind="unwind" unwindAction="returnToMainWithSegue:" id="bFQ-FZ-Dfs"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pql-Qh-mTt" firstAttribute="leading" secondItem="Dz9-1Y-Y1i" secondAttribute="leading" id="BcC-OG-iq6"/>
+                            <constraint firstItem="Pql-Qh-mTt" firstAttribute="top" secondItem="Dz9-1Y-Y1i" secondAttribute="top" id="hSf-O8-KGm"/>
+                            <constraint firstItem="POB-em-2fm" firstAttribute="top" secondItem="Pql-Qh-mTt" secondAttribute="bottom" id="kRr-9Q-KHE"/>
+                            <constraint firstAttribute="trailing" secondItem="Pql-Qh-mTt" secondAttribute="trailing" id="mIn-wR-GgE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="secondImageView" destination="Pql-Qh-mTt" id="Znq-6A-R6u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zf3-ae-QAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8sw-bQ-Zua" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="990" y="21"/>
+            <point key="canvasLocation" x="990" y="20.070422535211268"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tSo-L4-lP5"/>
+    </inferredMetricsTieBreakers>
 </document>
